@@ -3,6 +3,7 @@ Study Linux Programming
 
 ## Index
 1. [Basic Commands](#basic-commands)
+2. [Redirection and Pipe](#redirection-and-pipe)
 
 ## 1. Basic Commands
 Before we start, we can get detailed information about each command using ```--help``` option.
@@ -173,3 +174,5 @@ $ find ./ -name 'file*' -type -f  # find files whose name starts as 'file' in cu
 ./file1.txt
 ./file2.txt
 ```
+
+## 2. Redirection and Pipe
