@@ -100,3 +100,76 @@ $ rm file1.txt   # remove file1.txt
 $ rm dir    # remove directory named 'dir', 'dir' should be empty 
 $ rm dir -r # remove directory named 'dir'
 ```
+
+#### cat (concatenate)
+Concatenate given files and print it.
+```bash
+$ cat [file_path]
+
+$ cat file1.txt  # print contents of file1.txt
+$ cat file1.txt file2.txt  # concatenate file1.txt and file2.txt and print it
+```
+
+#### less
+View a given file page by page. 
+Unlike ```more``` command, it searches words, moves backward, and so one.
+```bash
+$ less [file_path]
+```
+It has several options, and followings are used commonly. 
+
+option | usage
+:---: | :---:
+-N | Print line number
+-n | Hide line number
+/[string] | Search [string]
+n | Search next [string]
+N | Search previous [string]
+[number] | Move to line [number]
+
+#### head
+Print the first few lines(10 lines by default) of a given file. 
+```bash
+$ head [file_path]
+
+$ head file1.txt       # print first 10 lines of file1.txt
+$ head file1.txt -n 8  # print first 8 lines of file1.txt
+```
+
+#### tail
+Print the last few lines(10 lines by default) of a given file. 
+If we use ```-F``` option, ```tail``` command doesn't terminate, then print file when update occurs.
+```bash
+$ tail [file_path]
+
+$ tail file1.txt       # print last 10 lines of file1.txt
+$ tail file1.txt -n 8  # print last 8 lines of file1.txt
+```
+
+#### file
+Find files or directories. 
+```bash
+$ file [file_path]
+
+$ file p1       # determine file type of file 'p1'
+p1: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=ad3eaeb130976a8de203103960aab263eff9c243, not stripped
+```
+
+#### find
+Determine file type of a given file.
+We can find only files or directories using ```-type``` option.
+```bash
+$ find [search_path] -name [file_name]
+
+$ find ./ -name 'file1.txt'    # find 'file1.txt' in current working directory
+file1.txt
+$ find ./ -name 'file*'        # find items whose name starts as 'file' in current working directory
+./file
+./file1.txt
+./file2.txt
+$ find ./ -name 'file*' -type -d  # find directories whose name starts as 'file' in current working directory
+./file
+$ find ./ -name 'file*' -type -f  # find files whose name starts as 'file' in current working directory
+./file1.txt
+./file2.txt
+```
