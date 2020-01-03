@@ -5,6 +5,7 @@ Study Linux Programming
 1. [Basic Commands](#basic-commands)
 2. [Redirection and Pipe](#redirection-and-pipe)
 
+<a name="basic-commands" />
 ## 1. Basic Commands
 Before we start, we can get detailed information about each command using ```--help``` option.
 For example, if you want to know detailed usage and relevant options of ```ls```, you should do like this.
@@ -175,4 +176,5 @@ $ find ./ -name 'file*' -type -f  # find files whose name starts as 'file' in cu
 ./file2.txt
 ```
 
+<a name="redirection-and-pipe" />
 ## 2. Redirection and Pipe
